@@ -31,6 +31,11 @@ make     # default target is "all""
 make run # will build, if necessary.
 ```
 
+Test the connection and data received from the site by using curl:
+```
+curl https://w1.weather.gov/xml/current_obs/KDCA.xml
+```
+
 For *weather* to run from the commandline, the loader will need to find libcurl.so.  One way to do this is 
 with environment variable *LD_LIBRARY_PATH*, as follows:
 
