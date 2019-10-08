@@ -9,7 +9,7 @@
 using namespace std;
 using namespace libcurlwrap;
 
-static string _KDCA("http://w1.weather.gov/xml/current_obs/KDCA.xml");
+static string _KDCA("https://w1.weather.gov/xml/current_obs/KDCA.xml");
 
 DCAWeather::DCAWeather()
 {
@@ -23,7 +23,7 @@ void DCAWeather::refresh()
 {
 	LibCurlWrap lc_wrapper;
 
-	string xhtml = lc_wrapper.getXHTML(_KDCA);
+    string xhtml = lc_wrapper.getXHTML(_KDCA);
 
 	xmlpp::DomParser parser;
 	
